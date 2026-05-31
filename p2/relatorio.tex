@@ -1,0 +1,419 @@
+\documentclass[12pt,a4paper]{article}
+
+% ------------------------------------------------------------------
+% Pacotes
+% ------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black
+}
+
+% Espaçamento 1,5 conforme normas acadêmicas
+\onehalfspacing
+
+% Formatação dos títulos de seção
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% ------------------------------------------------------------------
+% Capa
+% ------------------------------------------------------------------
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  {\large UNIVERSIDADE PRESBITERIANA MACKENZIE\par}
+  \vspace{0.5cm}
+  {\normalsize Administração de Negócios\par}
+  \vfill
+  {\Large\bfseries Diagnóstico Organizacional da Sentinela Cyber Consultoria em Segurança da Informação\par}
+  \vspace{0.4cm}
+  {\large Relatório dissertativo aplicando conceitos de Administração a uma empresa de consultoria em segurança da informação\par}
+  \vfill
+  {\normalsize\bfseries Autores:\par}
+  {\normalsize Bruno Viana\par}
+  {\normalsize Felipe Koike\par}
+  {\normalsize Jônatas Brito\par}
+  \vfill
+  {\normalsize Avaliação N2\par}
+  {\normalsize São Paulo, 2026\par}
+\end{titlepage}
+
+% ------------------------------------------------------------------
+% Sumário
+% ------------------------------------------------------------------
+\tableofcontents
+\newpage
+
+% ==================================================================
+% INTRODUÇÃO
+% ==================================================================
+\section{Introdução}
+
+A transformação digital ampliou de forma acelerada a superfície de exposição
+das organizações a ameaças cibernéticas. Nesse cenário, ataques de engenharia
+social, em especial o \textit{phishing}, tornaram-se uma das principais portas
+de entrada para incidentes de segurança, explorando não apenas falhas
+tecnológicas, mas sobretudo o comportamento humano. É justamente nessa
+fronteira entre tecnologia e pessoas que se posiciona a empresa analisada neste
+relatório.
+
+O presente trabalho tem por objetivo aplicar os conceitos estudados na
+disciplina de Administração de Negócios à realidade de uma empresa de
+consultoria em segurança da informação, a Sentinela Cyber Consultoria. A
+análise percorre a apresentação da organização, o diagnóstico de seu ambiente
+interno, a forma como executa o processo administrativo, o papel das
+\textit{soft skills} e do relacionamento interpessoal, a relação entre suas
+práticas e a evolução do pensamento administrativo e, por fim, uma reflexão
+crítica que confronta teoria e prática, propondo recomendações de gestão.
+
+A metodologia adotada combina a revisão dos conceitos teóricos vistos em sala,
+referentes às escolas Clássica, das Relações Humanas e Sistêmica, com a
+caracterização de uma empresa de pequeno porte do setor de tecnologia,
+permitindo observar como princípios administrativos consagrados continuam (ou
+não) aplicáveis a um negócio jovem, intensivo em conhecimento e fortemente
+dependente de capital humano qualificado.
+
+% ==================================================================
+% 1. APRESENTAÇÃO DA EMPRESA
+% ==================================================================
+\section{Apresentação da Empresa Pesquisada}
+
+\subsection{Breve histórico e área de atuação}
+
+A Sentinela Cyber Consultoria é uma empresa de tecnologia que atua no mercado
+de segurança da informação na modalidade de consultoria. Foi fundada por três
+alunos da Universidade Presbiteriana Mackenzie (Bruno Viana, Felipe Koike e
+Jônatas Brito), que uniram suas trajetórias profissionais complementares para
+oferecer ao mercado serviços voltados à proteção do elo mais frágil da cadeia
+de segurança: as pessoas.
+
+A complementaridade dos fundadores é um dos pilares do negócio. Bruno Viana
+traz dez anos de experiência na área de auditoria, fundamentais para a
+estruturação de processos de \textit{compliance} e avaliação de riscos. Felipe
+Koike soma nove anos como analista de dados sênior em uma instituição
+bancária, competência decisiva para a análise de indicadores e métricas de
+segurança. Jônatas Brito reúne quatro anos em infraestrutura de TI e três anos
+como desenvolvedor \textit{backend}, garantindo a base técnica para a
+condução de testes, simulações e desenvolvimento de soluções internas.
+
+A empresa atua de forma especializada na prestação dos seguintes serviços:
+
+\begin{itemize}[noitemsep]
+  \item Treinamentos antiphishing e campanhas de conscientização (\textit{security awareness});
+  \item Capacitação em boas práticas no uso de ferramentas da internet e de produtividade corporativa;
+  \item Consultoria em políticas de segurança da informação e \textit{compliance};
+  \item Simulações de ataques de engenharia social e geração de relatórios de maturidade em segurança.
+\end{itemize}
+
+O posicionamento da empresa é, portanto, o de uma consultoria \textit{boutique}
+de segurança da informação, com forte ênfase no fator humano, atendendo
+organizações que buscam reduzir incidentes decorrentes de erro humano e
+fortalecer sua cultura de segurança.
+
+\subsection{Estrutura organizacional básica}
+
+A Sentinela Cyber organiza-se em três áreas, cada uma liderada por um dos
+sócios fundadores e estruturada de forma padronizada com sete integrantes: o
+diretor da área, um gerente de projetos (PM) ou \textit{product owner} (PO),
+quatro colaboradores e um estagiário. Esse desenho equilibra as três frentes,
+totaliza vinte e uma pessoas e cria um caminho claro de desenvolvimento de
+carreira dentro de cada equipe. A divisão de responsabilidades acompanha as
+especialidades de cada fundador:
+
+\begin{itemize}[noitemsep]
+  \item Diretoria de Auditoria e Compliance (Bruno Viana): responsável pela
+        metodologia de avaliação de riscos, conformidade e relacionamento com
+        áreas de governança dos clientes;
+  \item Diretoria de Dados e Inteligência (Felipe Koike): responsável pela
+        análise de indicadores, mensuração de resultados das campanhas e apoio à
+        tomada de decisão baseada em dados;
+  \item Diretoria de Tecnologia e Operações (Jônatas Brito): responsável pela
+        infraestrutura, pelas plataformas de simulação de phishing e pelo
+        desenvolvimento das ferramentas internas.
+\end{itemize}
+
+Dentro de cada área, os papéis cumprem funções complementares. O diretor
+responde pela estratégia da frente e pelo relacionamento com os clientes. O PM
+ou PO coordena o fluxo de trabalho, prioriza as entregas e faz a interface
+entre a equipe técnica e os clientes. Os quatro colaboradores executam as
+atividades-fim da área, como auditorias, análises de dados ou operações
+técnicas. O estagiário apoia as tarefas operacionais e está em formação,
+sustentando o pilar de Evolução Contínua e a renovação de talentos da empresa.
+
+Trata-se de uma estrutura predominantemente funcional, organizada por
+especialidade, na qual a padronização do tamanho e da composição das equipes
+favorece a coordenação, a previsibilidade da capacidade produtiva e a
+escalabilidade do negócio.
+
+% ==================================================================
+% 2. DIAGNÓSTICO DO AMBIENTE ORGANIZACIONAL
+% ==================================================================
+\section{Diagnóstico do Ambiente Organizacional}
+
+\subsection{Cultura organizacional: valores, clima e práticas de liderança}
+
+A cultura da Sentinela Cyber é fortemente influenciada pela origem técnica e
+acadêmica de seus fundadores e pela própria natureza do negócio, que exige
+disciplina, ética e confiança. Para traduzir esses elementos, a empresa
+estrutura sua cultura em quatro pilares que expressam responsabilidade
+conjunta, união entre colaboradores e boas práticas no ambiente empresarial:
+
+\begin{enumerate}[label=\arabic*.]
+  \item Defesa Coletiva: a segurança é responsabilidade de todos; cada
+        colaborador é corresponsável pela proteção da empresa e dos clientes,
+        reforçando o princípio da responsabilidade conjunta.
+  \item Confiança em Rede: a união entre os colaboradores é tratada como um
+        ativo estratégico; a colaboração aberta, o compartilhamento de
+        conhecimento e o apoio mútuo sustentam os resultados coletivos.
+  \item Integridade Inegociável: a ética, a transparência e o sigilo são
+        tratados como condição inegociável, traduzindo as boas práticas no
+        ambiente empresarial e na relação com os clientes.
+  \item Evolução Contínua: diante de um cenário de ameaças em constante mutação,
+        o aprendizado permanente e a melhoria contínua são valores centrais para
+        a sustentabilidade do negócio.
+\end{enumerate}
+
+O clima organizacional, favorecido pela proximidade entre as equipes, é de
+abertura, autonomia e comunicação direta. A liderança é exercida de forma
+participativa: as decisões estratégicas são debatidas coletivamente entre os
+três sócios, e cada um lidera tecnicamente sua área de especialidade. Esse
+modelo aproxima-se de um estilo de liderança democrática, no qual a autoridade
+decorre mais da competência reconhecida do que da posição hierárquica.
+
+\subsection{Principais desafios enfrentados pela empresa}
+
+Apesar do diferencial competitivo, a Sentinela Cyber enfrenta desafios típicos
+de uma empresa jovem e de um setor altamente dinâmico:
+
+\begin{itemize}[noitemsep]
+  \item Dependência das pessoas-chave: por concentrarem a estratégia e o
+        conhecimento técnico das áreas, os três sócios fundadores ainda
+        representam um ponto crítico para a continuidade do negócio;
+  \item Construção de credibilidade: por ser nova no mercado, a empresa precisa
+        conquistar a confiança de clientes em um setor onde reputação é
+        determinante;
+  \item Atualização constante: a evolução acelerada das ameaças exige
+        investimento permanente em capacitação e atualização técnica;
+  \item Formalização de processos: a informalidade característica do início do
+        negócio precisa ceder lugar a processos documentados e escaláveis;
+  \item Mensuração de resultados intangíveis: demonstrar o retorno de
+        treinamentos comportamentais é um desafio metodológico recorrente.
+\end{itemize}
+
+% ==================================================================
+% 3. PROCESSO ADMINISTRATIVO NA PRÁTICA
+% ==================================================================
+\section{Processo Administrativo na Prática}
+
+O processo administrativo, conforme proposto pela abordagem clássica e
+consolidado na literatura, compreende quatro funções interligadas:
+planejamento, organização, direção e controle. A seguir, descreve-se como cada
+uma se manifesta na Sentinela Cyber.
+
+\subsection{Planejamento}
+
+O planejamento estratégico da empresa parte da definição de seu nicho, a
+consultoria em segurança da informação centrada no fator humano. No nível
+tático, são estabelecidas metas trimestrais de aquisição de clientes e de
+desenvolvimento de novos pacotes de serviços. No nível operacional, cada
+projeto de consultoria conta com um plano de ação com escopo, cronograma e
+entregáveis definidos junto ao cliente.
+
+\subsection{Organização}
+
+A organização se materializa na divisão de responsabilidades entre as três
+diretorias (Auditoria/Compliance, Dados/Inteligência e Tecnologia/Operações),
+na padronização de metodologias de trabalho e na alocação de recursos
+tecnológicos. Cada projeto é organizado em etapas: diagnóstico inicial,
+execução das campanhas e simulações, análise de resultados e plano de melhoria.
+
+\subsection{Direção}
+
+A direção é exercida por meio da liderança participativa dos sócios, da
+coordenação direta das equipes de projeto e da manutenção de um ambiente de
+motivação e engajamento. A comunicação fluida e a autonomia concedida aos
+colaboradores são instrumentos centrais de direção em uma organização
+intensiva em conhecimento.
+
+\subsection{Controle}
+
+O controle ocorre por meio do acompanhamento de indicadores de desempenho dos
+clientes, como a taxa de cliques em campanhas de phishing simulado, a evolução
+da taxa de reporte de e-mails suspeitos e o índice de conclusão dos
+treinamentos. Internamente, são monitorados prazos, satisfação dos clientes e
+resultados financeiros, permitindo ajustes nas ações planejadas.
+
+\subsection{Ferramentas de apoio à decisão}
+
+A empresa utiliza um conjunto de ferramentas que sustentam a tomada de decisão
+baseada em evidências:
+
+\begin{itemize}[noitemsep]
+  \item Painéis (\textit{dashboards}) de indicadores, sob responsabilidade da
+        diretoria de dados, que consolidam métricas de segurança e desempenho;
+  \item Plataformas de simulação de phishing, que geram dados objetivos sobre o
+        comportamento dos usuários;
+  \item Sistemas de gestão de projetos (ferramentas \textit{kanban}), para
+        acompanhamento de tarefas e prazos;
+  \item Matrizes de risco e análise SWOT, empregadas no diagnóstico estratégico
+        de clientes e da própria empresa.
+\end{itemize}
+
+% ==================================================================
+% 4. RELACIONAMENTO INTERPESSOAL E SOFT SKILLS
+% ==================================================================
+\section{Relacionamento Interpessoal e Soft Skills}
+
+\subsection{Motivação, comunicação e trabalho em equipe}
+
+Em uma consultoria formada por sócios com forte vínculo acadêmico e
+profissional, a motivação é sustentada pelo sentimento de propósito comum e
+pela autonomia técnica de cada um. A comunicação é direta e horizontal,
+favorecida pela proximidade entre as equipes, e o trabalho em equipe é condição
+para a entrega dos projetos, que combinam competências de auditoria, análise
+de dados e tecnologia.
+
+\subsection{Importância das soft skills para o desempenho}
+
+Embora a empresa atue em um setor essencialmente técnico, seu sucesso depende
+fortemente de \textit{soft skills}. A própria atividade-fim, que é
+conscientizar pessoas sobre segurança, exige habilidades de comunicação,
+didática e empatia para traduzir conceitos técnicos a públicos não
+especializados. Destacam-se como competências comportamentais críticas:
+
+\begin{itemize}[noitemsep]
+  \item Comunicação e didática: essenciais na condução de treinamentos e na
+        sensibilização dos colaboradores dos clientes;
+  \item Empatia: necessária para abordar erros humanos sem gerar
+        constrangimento, criando uma cultura de segurança positiva;
+  \item Pensamento crítico e ético: indispensável diante do acesso a
+        informações sensíveis;
+  \item Colaboração: integra as diferentes especialidades dos sócios em
+        soluções coesas.
+\end{itemize}
+
+A combinação entre competências técnicas (\textit{hard skills}) e
+comportamentais (\textit{soft skills}) é, portanto, o principal diferencial
+competitivo da Sentinela Cyber.
+
+% ==================================================================
+% 5. EVOLUÇÃO DO PENSAMENTO ADMINISTRATIVO
+% ==================================================================
+\section{Evolução do Pensamento Administrativo}
+
+\subsection{Relação entre práticas observadas e teorias administrativas}
+
+As práticas da Sentinela Cyber podem ser interpretadas à luz das principais
+escolas do pensamento administrativo:
+
+\begin{itemize}[noitemsep]
+  \item Administração Científica (Taylor): manifesta-se na padronização de
+        metodologias, na busca por eficiência na execução dos projetos e na
+        medição objetiva de resultados (indicadores e métricas), herança da
+        racionalização do trabalho.
+  \item Teoria Clássica (Fayol): fundamenta o uso das funções administrativas
+        (planejar, organizar, dirigir e controlar) e da divisão de
+        responsabilidades entre as diretorias, ainda que de forma flexível.
+  \item Teoria das Relações Humanas (Mayo): é fortemente presente, pois a
+        empresa valoriza a motivação, o clima organizacional, a comunicação e os
+        aspectos humanos, alinhada à própria essência de um negócio centrado no
+        fator humano.
+  \item Escola Sistêmica: reflete-se na visão da segurança como um sistema
+        integrado de pessoas, processos e tecnologia, e na compreensão de que a
+        empresa interage continuamente com um ambiente externo dinâmico (novas
+        ameaças, regulações e clientes).
+\end{itemize}
+
+\subsection{Conceitos ainda aplicados e conceitos superados}
+
+Entre os conceitos ainda aplicados, destacam-se a padronização de processos e a
+mensuração de resultados (de inspiração taylorista), as funções administrativas
+de Fayol e, sobretudo, a valorização do fator humano proposta pela Escola de
+Relações Humanas, plenamente aderente ao modelo de negócio.
+
+Entre os conceitos superados, observa-se o afastamento da rigidez hierárquica e
+da visão mecanicista do trabalhador (\textit{homo economicus}) características da
+abordagem clássica. A estrutura horizontalizada, a autonomia e a liderança
+participativa adotadas pela empresa contrastam com o comando centralizado e a
+especialização extrema preconizados pela administração científica em sua forma
+original.
+
+% ==================================================================
+% 6. REFLEXÃO CRÍTICA
+% ==================================================================
+\section{Reflexão Crítica}
+
+\subsection{Teoria estudada versus prática observada}
+
+A análise revela que a Sentinela Cyber representa um híbrido entre teoria e
+prática. Por um lado, sustenta-se sobre princípios clássicos consolidados, como
+planejamento, organização, direção e controle, demonstrando que tais funções
+permanecem relevantes mesmo em uma empresa jovem e tecnológica. Por outro, sua
+dinâmica cotidiana aproxima-se muito mais das abordagens humanística e
+sistêmica, evidenciando que a gestão contemporânea valoriza pessoas,
+flexibilidade e adaptação ao ambiente.
+
+Observa-se, contudo, uma lacuna entre a teoria e a prática no campo da
+formalização: muitos processos ainda dependem do conhecimento tácito dos
+sócios, o que contraria os princípios de documentação e padronização defendidos
+pela teoria administrativa e representa um risco à escalabilidade.
+
+\subsection{Propostas de melhoria e recomendações de gestão}
+
+Com base no diagnóstico, recomendam-se as seguintes ações de gestão:
+
+\begin{enumerate}[label=\arabic*.]
+  \item Formalizar e documentar processos, reduzindo a dependência das
+        pessoas-chave e viabilizando o crescimento sustentável;
+  \item Planejar a expansão da equipe, contratando analistas para aliviar a
+        sobrecarga dos sócios e permitir foco estratégico;
+  \item Implantar um planejamento estratégico formal com indicadores (KPIs)
+        claros para a própria empresa, e não apenas para os clientes;
+  \item Estruturar um programa de capacitação contínua, em coerência com o pilar
+        de Evolução Contínua e com a velocidade das ameaças;
+  \item Desenvolver métricas de valor percebido pelos clientes, de modo a
+        demonstrar objetivamente o retorno dos serviços comportamentais.
+\end{enumerate}
+
+% ==================================================================
+% CONCLUSÃO
+% ==================================================================
+\section{Conclusão}
+
+O estudo da Sentinela Cyber Consultoria permitiu articular os conceitos da
+disciplina de Administração de Negócios com a realidade de uma empresa de
+consultoria em segurança da informação. Verificou-se que, embora o negócio seja
+recente e intensivo em tecnologia, ele se apoia em funções administrativas
+clássicas e, simultaneamente, incorpora de maneira intensa as contribuições das
+escolas de Relações Humanas e Sistêmica, coerentes com um modelo de negócio
+centrado nas pessoas.
+
+A complementaridade dos fundadores, nas áreas de auditoria, análise de dados e
+tecnologia, e a cultura organizacional ancorada em quatro pilares (Defesa
+Coletiva, Confiança em Rede, Integridade Inegociável e Evolução Contínua)
+constituem o principal diferencial competitivo da empresa. Os desafios
+identificados, em especial a dependência das pessoas-chave e a baixa
+formalização de processos, apontam para um caminho de amadurecimento gerencial.
+
+Conclui-se que a evolução do pensamento administrativo não é meramente
+histórica, mas cumulativa: as boas práticas de cada escola coexistem e se
+complementam na gestão contemporânea. Para a Sentinela Cyber, o desafio futuro
+consiste em equilibrar a flexibilidade e o capital humano que a tornam
+competitiva com a estruturação de processos que assegurem sua escalabilidade e
+perenidade.
+
+\end{document}
